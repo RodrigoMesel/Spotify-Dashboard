@@ -2,6 +2,10 @@
 
 Um dashboard interativo desenvolvido em Streamlit e Plotly para análise exploratória de dados do Spotify (2015-2025). O projeto foi modularizado para facilitar a manutenção e escalabilidade.
 
+## Como Acessar
+
+https://spotify-dashboard-rmlo.streamlit.app/
+
 ## Estrutura do Projeto
 
 - `app.py`: Arquivo principal da aplicação. Controla o layout e o sidebar.
@@ -14,7 +18,7 @@ Um dashboard interativo desenvolvido em Streamlit e Plotly para análise explora
   - `data_loader.py`: Script para carregamento, limpeza e cache dos dados.
 - `.streamlit/`: Contém as configurações de tema da aplicação (Spotify Dark Theme).
 
-## Como Executar
+## Como Executar Localmente
 
 1. Crie o seu ambiente virtual e ative-o (exemplo com WSL/Linux):
    ```bash
