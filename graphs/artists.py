@@ -31,7 +31,7 @@ def render_long_tail(df: pd.DataFrame):
         labels={'x': 'Número de Artistas (Ordenados do maior para menor)', 'y': 'Porcentagem Acumulada de Streams (%)'},
         title='Distribuição de Streams: A Cauda Longa dos Artistas'
     )
-    # Adiciona linha de referência dos 80% (Pareto)
+    # Adiciona linha de referência dos 80%
     fig_long_tail.add_hline(y=80, line_dash="dash", line_color="gray", annotation_text="80% dos Streams")
     fig_long_tail.update_traces(line=dict(width=3))
     st.plotly_chart(fig_long_tail, width='stretch')
@@ -55,7 +55,6 @@ def render_consistency_map(df: pd.DataFrame):
         consistencia.loc[one_hit_wonders, 'Categoria'] = 'One-Hit Wonders'
         consistencia.loc[consistentes, 'Categoria'] = 'Artistas Consistentes'
         
-        # Prepara pro Plotly
         consistencia_plot = consistencia.reset_index()
         
         color_map = {

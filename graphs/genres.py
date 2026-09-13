@@ -26,7 +26,6 @@ def render_market_share(df: pd.DataFrame):
     top_5_genres_all_time = df.groupby('genre')['stream_count'].sum().nlargest(5).index
     genre_market_share_top = genre_market_share[top_5_genres_all_time].reset_index()
 
-    # Derreter (melt) o dataframe para o Plotly Express formatar adequadamente as cores e áreas
     genre_market_share_top_melted = genre_market_share_top.melt(id_vars='release_year', var_name='genre', value_name='market_share')
 
     fig_market_share = px.area(

@@ -2,7 +2,6 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 def render_header():
-    # --- Logo e Player do Spotify ---
     col_logo, col_player = st.columns([1, 2])
 
     with col_logo:

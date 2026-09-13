@@ -3,7 +3,6 @@ import pandas as pd
 
 @st.cache_data
 def load_data():
-    # Caminho do arquivo original do notebook
     url = "spotify_data_processed.csv"
     try:
         df = pd.read_csv(url)
@@ -11,7 +10,6 @@ def load_data():
         st.error(f"Arquivo '{url}' não encontrado no diretório local.")
         st.stop()
             
-    # Remoção das colunas como no notebook original
     colunas_drop = ['key', 'loudness', 'mode', 'instrumentalness', 'tempo',
                     'explicit', 'label', 'loudness_category', 'key_name',
                     'mode_name', 'release_quarter', 'is_weekend_release',
